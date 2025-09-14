@@ -1,0 +1,10 @@
+shopify_data_ingestion/
+├── .env                  # Your environment variables
+├── .gitignore            # Files to ignore (e.g., .env, __pycache__, venv)
+├── main.py               # FastAPI application, routes, and main logic
+├── requirements.txt      # Project dependencies
+├── shopify.py            # Functions to interact with the Shopify API
+├── database.py           # Database connection and session management
+└── models/               # Directory for database models
+    ├── __init__.py       # Makes the directory a Python package
+    └── models.py         # SQLAlchemy models for all tables (Tenant, Customer, etc.)
