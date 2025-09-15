@@ -175,11 +175,11 @@ def ingest_orders(tenant_id: int, db: Session = Depends(get_db)):
 
     try:
         # Pass the shop_name and access_token to the Shopify client
-        data = shopify.get_shopify_data(tenant.shop_name, tenant.access_token, "orders")
+        data = shopify.get_shopify_data(tenant.shop_name, tenant.access_token, "draft_orders")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-    orders_data = data.get("orders", [])
+    orders_data = data.get("draft_orders", [])
     for order_json in orders_data:
         shopify_order_id = order_json.get("id")
         

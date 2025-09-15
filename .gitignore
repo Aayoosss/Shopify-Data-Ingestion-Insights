@@ -1,5 +1,5 @@
 fetch-example.py
-
+schema.sql
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
